@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    /* NOT WORKING */
+    /* font-family: 'Jost', sans-serif; */
+}
+/***************** UNIVERSAL FONTS ******************/
+h1,h2,h3,h5,p,li {
+    font-family: 'Jost', sans-serif;
+}
+
+/* NOT WORKING */
+/* h1 {
+    font-weight: 800;
+}
+h2 {
+    font-weight: 200;
+} */
+
+/***************** navigation bar ******************/
+nav {
+    width: 90%;
+}
+
+nav img {
+   max-width: 60px;
+}
+
+@media screen and (max-width: 600px) {
+    nav img {
+      width: 40px;
+    }
+  }
+
+.fas {
+    color: gray;
+
+}
+
+
+
+
+/***************** side bar ******************/
+.sidebar {
+    background-color: rgb(228, 198, 158);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1.2s ease;
+    transform: translate(-100%);
+    z-index: 2000;
+}
+
+.show-sidebar {
+    transform: translate(0);
+  }
+
+/* ------ side bar links ------- */
+.links {
+    height: 70%;
+}
+
+
+.sidebar .links li {
+    list-style-type: none;
+    margin-top: 2.5rem;
+    
+}
+
+.sidebar .links li a{
+    font-family: 'Jost', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color:rgba(94, 48, 21);
+    transition: all .3s ease;
+    
+}
+
+
+.sidebar .links li a:hover {
+    color:rgb(89, 46, 7, 0.3);
+
+    
+}
+
+/* ------ hamburger menu icon and logo animation------- */
+
+.fa-bars:hover {
+    animation: blink .5s linear;
+
+}
+.fa-angle-double-left:hover {
+    animation: blink .5s linear;
+}
+
+@keyframes blink {
+    0% {
+        color:  gray;
+    }
+    50% {
+        color: rgb(215, 215, 215);
+    }
+    100% {
+        color: gray;
+    }
+}
+
+/* ------ close button icon ------- */
+.fa-angle-double-left, .fa-bars {
+    cursor: pointer;
+}
+
+
+/* ------ download icon ------- */
+.fa-file-download {
+    color:rgba(94, 48, 21);
+    margin-left: .5rem;
+    transition: all .3s ease;
+}
+
+.fa-file-download:hover {
+    color:rgb(89, 46, 7, 0.3);
+}
+
+/* ------ social media icon ------- */
+.social-icons {
+    width: 80%;
+    height: 20%;
+
+}
+
+.sidebar .social-icons li {
+    list-style-type: none;
+    margin: 0 .7rem 0 .7rem;
+    
+}
+
+.sidebar .social-icons li a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+
+.fab {
+    font-size: 23px;
+    transition: all .4s ease;
+}
+
+.fab:hover {
+    font-size: 25px;
+}
+
+
+/***************** MAIN SECTION WIDTH AND MARGIN EACH SECTION******************/
+.containerAll {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.aboutme, .experience, .education, .skill{
+    margin-bottom: 6em;
+}
+
+/***************** ABOUT ME ******************/
+
+.aboutme {
+    margin-bottom: 6em;
+}
+
+
+.aboutme h2 {
+    border-top: rgb(89, 46, 7) solid 6px;
+    border-bottom: rgb(89, 46, 7)  solid 2px;
+}
+
+.aboutme h3 {
+    border-bottom:  rgb(89, 46, 7)  solid 6px;
+}
+
+/***************** EXPERIENCE ******************/
+
+.border_bottom_h1 {
+    border-bottom:  rgb(89, 46, 7)  solid 6px;
+
+}
+
+.border_bottom_p {
+    border-bottom: rgb(89, 46, 7)  solid .8px;
+}
+
+.btn {
+    width: 100%;
+}
+
+.btn:hover{
+    background-color: rgb(89, 46, 7, 0.1);
+}
+
+
+/***************** SKILLS ******************/
+.progressBar_box {
+  padding-top: .5em;
+}
+
+.progress {
+    width: 70%;
+}
+
+/***************** HOBBY ******************/
+.hobby_icon {
+    font-size: 70px;
+}
+
+.hobby .d-flex {
+    margin-bottom: 3em;
+}
+
+/***************** FOOTER ******************/
+footer {
+    background-color: rgb(89, 46, 7, 0.3);
+}
+
+footer .containerAll {
+    padding: 5em 0 1em 0;
+}
+
+.footer_container{
+    border-bottom: rgb(89, 46, 7) solid 1px;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+.footer_container ul li a {
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+/* WHY IS THIS NOT WORKING?? */
+/* .footerlink {
+    text-decoration: none;
+} */
+
+.footer_container ul li a:hover {
+    color: rgb(89, 46, 7, 0.3);
+}
+
+
+/***************** FONTS ******************/
+/* ------ FONTS FOR ABOUT ME ------- */
+.main_heading {
+    font-size: 3.5rem;
+    color: rgb(89, 46, 7, 0.3);
+}
+
+
+.aboutme h2 {
+    font-size: 3.5rem;
+}
+
+.aboutme h3 {
+    font-weight: 200;
+}
+
+.aboutme p {
+    font-size: 1.2rem;
+}
+
+/* ------ FONTS FOR EXPERIENCE AND OTHER ------- */
+
+.location {
+    font-weight: 200;
+}
+
+.period {
+    font-weight: 500;
+}
+
+.experience ul {
+    padding-left: 1.2em;
+}
+.experience li {
+    font-weight: 200;
+}
+
+/* ------ FONTS FOR SKILLS ------- */
+.skill_title {
+    color: rgb(89, 46, 7) ;
+    font-weight: 200;
+
+}
+
+/* ------ FONTS FOR FOOTER ------- */
+.footerlink {
+    text-decoration: none;
+    color: black;
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+ .myProject {
+    font-size: 3rem;
+    color:rgb(89, 46, 7, 0.3);
+
+ }
+
+/***************** FONTS MEDIA QUERIES******************/
+@media screen and (max-width: 992px) {
+    .main_heading {
+        font-size: 2.3rem;
+    }
+    .aboutme h2 {
+        font-size: 1.8rem;
+    }
+    .aboutme h3 {
+        font-size: 1.5rem;
+    }
+    .aboutme p {
+        font-size: 1rem;
+    }
+    .skill_label {
+        font-size: 0.8rem;
+    }
+    .footerlink {
+        font-size: 1.6rem;
+    }
+    .myProject {
+        font-size: 1.3rem;
+    }
+}
+
+/***************** Media Queries ****************/
+
+/* ------ SIDE BAR ------- */
+@media screen and (min-width: 600px) {
+    .sidebar {
+      width: 400px;
+    }
+  }
+
+
+/* ------ MAIN SECTION WIDTH ------- */
+@media screen and (max-width: 768px) {
+    .containerAll {
+        width: 86%;
+    }
+}
+
+
+
+
+
+/***************** Media Queries ****************/
+/* // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... } */
